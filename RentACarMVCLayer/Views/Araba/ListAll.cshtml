@@ -1,0 +1,102 @@
+﻿@model IEnumerable<RentACar5.Modelss.Concrete.Araba>
+
+@{
+    ViewBag.Title = "ListAll";
+}
+
+<h2>ListAll</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Marka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArabaTipi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArabaninKmsi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ehliyet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GunlukKmSiniri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GunlukKiraFiyati)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KiraliMi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KiraBaslangic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KiraBitis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MusteriID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SirketID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Marka)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Model)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ArabaTipi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Aciklama)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ehliyet)
+    </td>
+    <td>
+        @Html.DisplayNameFor(model => model.GunlukKmSiniri)
+    </td>
+    <td>
+        @Html.DisplayNameFor(model => model.GunlukKiraFiyati)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.KiraliMi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.KiraBaslangic)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.KiraBitis)
+    </td>
+    <td>
+        @Html.DisplayNameFor(model => model.MusteriID)
+    </td>
+    <td>
+        @Html.DisplayNameFor(model => model.SirketID)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id=item.ArabaID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ArabaID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ArabaID })
+    </td>
+</tr>
+}
+
+</table>

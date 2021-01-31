@@ -1,0 +1,71 @@
+﻿@model IEnumerable<RentACar5.Modelss.Concrete.Musteri>
+
+@{
+    ViewBag.Title = "ListAll";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Encode("Ad")
+        </th>
+        <th>
+            @Html.Encode("Soyad")
+        </th>
+        <th>
+            @Html.Encode("Yas")
+        </th>
+        <th>
+            @Html.Encode("Parola")
+        </th>
+        <th>
+            @Html.Encode("KimlikNo")
+        </th>
+        <th>
+            @Html.Encode("Maas")
+        </th>
+        <th>
+            @Html.Encode("Ehliyet")
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Parola)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KimlikNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maas)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Ehliyet)
+            </td>
+            <td>
+                @Html.ActionLink("Detail", "Details", new { id = item.KullaniciID }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.KullaniciID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.KullaniciID })
+            </td>
+        </tr>
+    }
+
+</table>

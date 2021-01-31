@@ -1,0 +1,51 @@
+﻿@model IEnumerable<RentACar5.Modelss.Concrete.Sirket>
+
+@{
+    ViewBag.Title = "ListAll";
+}
+
+<h2>ListAll</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SirketPuan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SirketAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SirketAdres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yoneticisi)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.SirketPuan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SirketAd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SirketAdres)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.Yoneticisi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.SirketID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.SirketID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SirketID })
+        </td>
+    </tr>
+    }
+
+</table>

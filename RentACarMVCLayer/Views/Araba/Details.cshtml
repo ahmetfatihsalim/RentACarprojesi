@@ -1,0 +1,116 @@
+﻿@using System.Activities.Statements
+@using System.Runtime.Remoting.Messaging
+@model RentACar5.Modelss.Concrete.Araba
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Araba</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Marka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArabaTipi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArabaTipi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ehliyet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ehliyet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GunlukKmSiniri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GunlukKmSiniri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GunlukKiraFiyati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GunlukKiraFiyati)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KiraliMi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KiraliMi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KiraBaslangic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KiraBaslangic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KiraBitis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KiraBitis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MusteriID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MusteriID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SirketID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SirketID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ArabaID }) |
+    @Html.ActionLink("Back to List", "ListAll")
+</p>

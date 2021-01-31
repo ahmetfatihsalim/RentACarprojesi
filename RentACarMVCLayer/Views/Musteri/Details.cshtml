@@ -1,0 +1,76 @@
+﻿@using System.Activities.Statements
+@using System.Runtime.Remoting.Messaging
+@model RentACar5.Modelss.Concrete.Musteri
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Musteri</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Parola)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parola)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KimlikNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KimlikNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ehliyet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ehliyet)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KullaniciID }) |
+    @Html.ActionLink("Back to List", "ListAll")
+</p>

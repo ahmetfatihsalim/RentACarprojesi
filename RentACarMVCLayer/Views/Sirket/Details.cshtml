@@ -1,0 +1,52 @@
+﻿@using System.Activities.Statements
+@using System.Runtime.Remoting.Messaging
+@model RentACar5.Modelss.Concrete.Sirket
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sirket</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SirketPuan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SirketPuan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SirketAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SirketAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SirketAdres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SirketAdres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yoneticisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yoneticisi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "ListAll")
+</p>
